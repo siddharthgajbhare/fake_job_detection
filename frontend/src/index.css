@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  @apply bg-slate-900 text-white min-h-screen font-sans overflow-x-hidden;
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.15) 0%, transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.15) 0%, transparent 25%),
+    linear-gradient(to bottom, #0f172a, #020617);
+}
+
+.glass-card {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] rounded-2xl;
+}
+
+.glass-input {
+  @apply bg-black/20 border border-white/10 text-white placeholder-gray-400 focus:ring-2 focus:ring-neonCyan/50 focus:border-transparent outline-none transition-all rounded-lg px-4 py-3;
+}
+
+.glass-btn {
+  @apply relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold shadow-lg transform transition-all hover:scale-105 active:scale-95 rounded-xl px-6 py-3;
+}
+
+.glass-btn::before {
+  content: '';
+  @apply absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-500;
+  transform: skewX(-20deg);
+}
+
+.glass-btn:hover::before {
+  @apply left-[100%];
+}

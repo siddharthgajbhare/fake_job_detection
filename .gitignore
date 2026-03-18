@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Node.js
+node_modules/
+dist/
+build/
+.DS_Store
+
+# Large files
+backend/ml/model.h5
+backend/ml/tokenizer.pickle
+# (Optional: uncomment if you use Git LFS or don't want to push models)
+
+# Logs
+*.log
+backend_logs.txt
+build_log.txt
+test_output.txt
+test_error.txt

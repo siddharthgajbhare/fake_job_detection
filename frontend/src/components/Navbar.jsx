@@ -32,12 +32,10 @@ const Navbar = () => {
                 }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link to="/" className="flex items-center gap-3 group">
-                    <img 
-                        src="/logo.png" 
-                        alt="Logo" 
-                        className="w-10 h-10 rounded-lg group-hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all duration-300"
-                    />
+                <Link to="/" className="flex items-center gap-2 group">
+                    <div className="p-2 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-lg group-hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-shadow duration-300">
+                        <ShieldCheck className="w-6 h-6 text-white" />
+                    </div>
                     <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 group-hover:from-cyan-400 group-hover:to-blue-400 transition-all duration-300">
                         FakeJob<span className="text-cyan-500">Detector</span>
                     </span>

@@ -20,7 +20,12 @@ const Register = () => {
             // Redirect to login page after successful registration
             navigate('/login');
         } catch (err) {
-            setError(err.response?.data?.detail || 'Registration failed');
+            const detail = err.response?.data?.detail;
+            if (Array.isArray(detail)) {
+                setError(detail[0].msg);
+            } else {
+                setError(detail || 'Registration failed');
+            }
         }
     };
 

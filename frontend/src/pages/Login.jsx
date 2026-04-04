@@ -18,7 +18,12 @@ const Login = () => {
             await login(email, password);
             navigate('/dashboard');
         } catch (err) {
-            setError(err.response?.data?.detail || 'Login failed');
+            const detail = err.response?.data?.detail;
+            if (Array.isArray(detail)) {
+                setError(detail[0].msg);
+            } else {
+                setError(detail || 'Login failed');
+            }
         }
     };
 

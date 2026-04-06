@@ -95,6 +95,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 👥 Authors
+## 👥 Team Members
 
-- **Sameer** - *Initial Work & Architecture*
+- **Siddharth Gajbhare** – Frontend & Integration  
+- **Sameer Arjun** – Backend Development  
+- **Ayush Gadag** – Machine Learning Model  
